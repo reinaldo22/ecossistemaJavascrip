@@ -23,6 +23,19 @@ const storage = multer.diskStorage({
     }
 });
 app.use(multer({storage}).single('image'));
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+
+
+//Rotas
+app.use('/api/books', require('./routes/books'));
+
+//arquivos staticos
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+
+
 //Start on server
 app.listen(app.get('porta'), ()=>{
 
