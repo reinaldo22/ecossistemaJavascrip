@@ -1,3 +1,7 @@
+require('dotenv').config();
+console.log(process.env.NODE_ENV);
+
+
 const express = require("express");
 const morgan  = require("morgan");
 const multer = require("multer");
@@ -8,7 +12,7 @@ const app = express();
 require('./database');
 
 //Settings
-app.set('porta', 3000);
+app.set('porta',process.env.PORT || 3000);
 
 
 //midleware morgan, multer, urlencoded

@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
-mongoose.connect('mongodb://localhost/javascripdb', {
+
+mongoose.connect(process.env.MONGODB_URI, {
     
     useNewUrlParser : true
 
