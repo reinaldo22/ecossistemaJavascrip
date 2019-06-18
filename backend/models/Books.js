@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const BooSchema = new Schema({
+const BookSchema = new Schema({
 
     title:{
         type: String,
@@ -15,8 +15,7 @@ const BooSchema = new Schema({
         required: true
     },
     imagePath:{
-        type: String,
-        required: true
+        type: String
     },
     created_at:{
         type: Date,
@@ -25,4 +24,4 @@ const BooSchema = new Schema({
 
 });
 
-module.exports = model('Book', BooSchema);
+module.exports = model('Book', BookSchema);

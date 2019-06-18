@@ -4,3 +4,4 @@ Aprendendo javascript em todo seu ecossistema
 1 - npm init -y
 2 - sudo npm i express mongoose morgan multer dotenv cross-env cors
 3 - sudo npm i fs-extra 
+4 - sudo npm i nodemon -D
