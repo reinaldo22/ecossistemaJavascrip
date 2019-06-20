@@ -3,23 +3,28 @@
 
 <head>
   <meta charset="UTF-8">
+  <title>Computer Products</title>
+  <link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Javascript books</title>
 
-  <!--BOOTSTRAP 4-->
+  <!--BOOTSTRAP 4
   <link rel="stylesheet" href="../backend/public/css/bootstrap.css">
   <link rel="stylesheet" href="../backend/public/css/estilo.css">
-
+  -->
   <!--ANIMATE CSS-->
 
 </head>
 
 <body>
 
-  <nav class="navbar-dark">
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-dark bg-dark">
     <div class="container">
-      <a href="/" class="navbar-brand"> Books onde the table</a>
+      <a class="navbar-brand" href="/">Books App</a>
     </div>
   </nav>
 
@@ -37,22 +42,20 @@
           <div class="form-group">
             <input type="text" id="isbn" class="form-control" placeholder="ISBN">
           </div>
-          <div class="form-group mb-3">
+          <div class="input-group mb-3">
             <div class="custom-file">
               <input type="file" class="custom-file-input" id="image" required>
-              <label class="custom-file-label" for="image">Choose Image</label>
+              <label class="custom-file-label" for="image" aria-describedby="inputGroupFileAddon02">Choose Image</label>
             </div>
           </div>
-
           <button type="Submit" class="btn btn-primary">
             Save Book
           </button>
-
         </form>
-
       </div>
 
       <div class="col-md-8" id="books-cards">
+        
       </div>
 
     </div>
@@ -60,6 +63,8 @@
   </div>
 
 
+
 </body>
+
 
 </html>

@@ -22,6 +22,7 @@ class BookService{
             body: book
         });
         const data = await res.json();
+        console.log(data);
     }
          
      //Deletar pelo id

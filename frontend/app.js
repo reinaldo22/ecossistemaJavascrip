@@ -1,5 +1,11 @@
 import './styles/app.css';
-import BookService from './services/BookService';
+
+import UI from './UI';
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    const ui = new UI();
+    ui.renderBooks();
+});
 
 //Pegando informações dos id's la do formulario html
 document.getElementById('book-form')
@@ -17,11 +23,10 @@ document.getElementById('book-form')
         formData.append('autor', autor);
         formData.append('title', title);
         formData.append('isbn', isbn);
-
-        //instancio o serviços aqui
-        const bookService  = new BookService();
-        bookService.postBook(formData);
-
+        
+        const ui = new UI();
+        ui.addANewBook(formData);
+        
         //console.log(title, autor, isbn, image)
 
         e.preventDefault();
