@@ -8,10 +8,11 @@ rota.get("/", async (req, res)=>{
     res.json(Books);    
  });
 
-rota.post("/", async(req, res)=>{
+rota.post('/', async(req, res)=>{
     
     const {title, autor, isbn} = req.body;
-    const novoLivro = new Book({title,autor,isbn})
+    const imagePath = '/uploads/' + req.file.filename;
+    const novoLivro = new Book({title,autor,isbn, imagePath})
     await novoLivro.save()
     res.json({message: "Livro salvo com sucesso!"});
 });
