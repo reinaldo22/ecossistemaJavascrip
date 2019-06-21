@@ -1,6 +1,9 @@
 const express = require('express');
 const rota = express.Router();
 const Book = require("../models/Books");
+const {unlink} = require("fs-extra");
+const path = require("path");
+
 
 
 rota.get("/", async (req, res)=>{
@@ -19,8 +22,8 @@ rota.post('/', async(req, res)=>{
 
 rota.delete("/:id", async (req, res)=>{
     const book = await Book.findByIdAndDelete(req.params.id);
-    console.log(book);
-    res.send("Deletado com sucesso!");
+    unlink(path.resolve('./backend/public' + book.imagePath ))
+    res.json({message: "DELETADO COM SUCESSO!" });
 });
 
 

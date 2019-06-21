@@ -26,16 +26,16 @@ class BookService{
     }
          
      //Deletar pelo id
-    async deleteBook(bookId){
-           const response = await fetch(`${this.API}/${bookId}`, {
-                headers:{
-                    'Content-type':'application/json'
-                },
-                method: 'DELETE'
-            });
-            await response.json();
+   async deleteBook(bookId) {
+        const res = await fetch(`${this.API}/${bookId}`, {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'DELETE'
+        });
+        const data = await res.json();
+        console.log(data);
     }
 
-
-} 
-module.exports = BookService;
+}
+export default  BookService;
